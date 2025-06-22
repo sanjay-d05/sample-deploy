@@ -23,7 +23,7 @@ function App() {
     e.preventDefault();
     setIsSigning(true);
     try {
-      await axios.post('http://localhost:5001/api', data);
+      await axios.post('https://sample-deploy-server.onrender.com/api', data);
       setDisplayData({ name: data.name, email: data.email });
       toast.success('Account Created Successfully !');
       setData({ name: '', email: '', password: '' });
